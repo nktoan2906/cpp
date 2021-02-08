@@ -10,4 +10,9 @@ int main()
     int b = 1;
     int c = a + b;
     std::cout << c;
+
+    int a = 1;
+    int b = 1;
+    int c = a - b;
+    std::cout << c;
 }
