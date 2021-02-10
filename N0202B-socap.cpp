@@ -3,9 +3,8 @@
 using namespace std;
 bool kiemtra(int n)
 {
-    long long ntruoc = n / 10;
-    long long nsau = n % 10;
-    return ntruoc == nsau && n < 100 && n >=10 ;
+    // dung pp chia het cho 11
+    return n % 11 == 0 && n < 100 && n >= 10;
 }
 
 int main()
@@ -17,5 +16,6 @@ int main()
     {
         cout << "YES";
     }
-    else cout << "NO";
+    else
+        cout << "NO";
 }
