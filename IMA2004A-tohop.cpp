@@ -11,3 +11,4 @@ int main(){
     cout << C(k, n);
     return 0;
 }
+    
