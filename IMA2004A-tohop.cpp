@@ -1,4 +1,3 @@
-//http://laptrinhphothong.vn/Problem/Details/5656
 #include<iostream>
 using namespace std;
 int C(int k, int n) {
