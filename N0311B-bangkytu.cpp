@@ -1,14 +1,13 @@
 //http://laptrinhphothong.vn/Problem/Details/4581
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 long long n,m;
-char q;
-int main()
-{
-    cin>>n>>m>>q;
+char ch;
+int main() {
+    cin>>n>>m>>ch;
     for(int i=1;i<=n;i++){
         for(int j=1;j<=m;j++){
-            cout<<q;
+            cout<<ch;
         }
         cout<<endl;
     }
