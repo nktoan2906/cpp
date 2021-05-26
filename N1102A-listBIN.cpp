@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
-int main()
-{
+int main() {
 	int n;
 	cin >> n; // yeu cau nguoi dung nhap vao do dai chuoi n
 	// khoi tao mang n phan tu va gan cac phan tu cua mang bang 0
