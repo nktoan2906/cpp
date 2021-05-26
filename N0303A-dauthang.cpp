@@ -1,14 +1,11 @@
 //http://laptrinhphothong.vn/Problem/Details/4573
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 long long n;
-int main()
-{
+int main(){ 
     cin>>n;
-    for (int i=1; i<=3; i++)
-    {
-        for (int j=1; j<=n; j++)
-        {
+    for (int i=1; i<=3; i++) {
+        for (int j=1; j<=n; j++) {
             cout<<"#";
         }
         n--;
