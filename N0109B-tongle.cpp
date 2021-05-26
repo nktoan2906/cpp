@@ -2,8 +2,7 @@
 #include <iostream>
 using namespace std;
 long long n;
-int main()
-{
+int main() {
     cin>>n;
     long long s = (n+1)*(n+1);
     cout<<s;
