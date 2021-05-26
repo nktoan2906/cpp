@@ -2,8 +2,7 @@
 #define ll long long
 using namespace std;
 ll spsum,sp,songay;
-int main()
-{
+int main() {
     cin>>spsum>>sp;
     while(spsum>0) {
         spsum-=sp;
