@@ -2,8 +2,7 @@
 #include <string> 
 #include <regex> 
 using namespace std; 
-int main (void) 
-{ 
+int main (void)  { 
    string MyString; 
    getline(cin, MyString); 
    regex digit("[[:digit:]]"); 
