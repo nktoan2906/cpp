@@ -1,9 +1,9 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <math.h>
+#include <algorithm>
 #define ll long long
 using namespace std;
-
-int main()
-{
+int main() {
     ll n,a[101],dem = 0;
     cin>>n;
     for(int i=1;i<=n;i++) cin>>a[i];
