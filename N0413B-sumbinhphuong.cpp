@@ -5,8 +5,7 @@
 #define ull unsigned long long
 using namespace std;
 ll max1 = 0, max2 = 0;
-int main()
-{
+int main() {
     ll n; cin >> n;
     for (int i = 1; i <= n; ++i) {
         ll a;
