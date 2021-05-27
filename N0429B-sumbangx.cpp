@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
-int main()
-{
+int main() {
     long long n, x;
     cin >> n >> x;
     int a[101];
