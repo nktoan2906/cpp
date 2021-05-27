@@ -3,17 +3,16 @@
 #include <math.h>
 #define ll long long
 using namespace std;
-int main()
-{
-      ll n, i = 1, d = 0;
+int main() {
+      ll n, i = 1, dem = 0;
       cin >> n;
       while (i <= sqrt(n)) {
             if (n % i == 0) {
-                  d++;
-                  if (i != (n / i)) d++;
+                  dem++;
+                  if (i != (n / i)) dem++;
             }
             i++;
       }
-      cout << d;
+      cout << dem;
       return 0;
 }
