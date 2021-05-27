@@ -1,8 +1,7 @@
 //http://laptrinhphothong.vn/Problem/Details/5801
 #include <iostream>
 using namespace std;
-int main()
-{
+int main() {
     int n, k;
     cin >> n >> k;
     while (k % n != 0) {
