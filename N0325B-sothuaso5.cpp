@@ -2,8 +2,7 @@
 #include <iostream>
 using namespace std;
 long long n,res;
-int main()
-{
+int main() {
 	cin>>n;
 	while (n%5==0){
 		n/=5;
