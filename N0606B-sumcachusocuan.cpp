@@ -5,8 +5,7 @@ int main(){
 	int sum = 0;
 	string s;
 	cin >> s;
-	for (int i = 0; i < s.size(); i++)
-	{
+	for (int i = 0; i < s.size(); i++) {
 		int x = s[i] - 48;
 		sum += x;
 	}
