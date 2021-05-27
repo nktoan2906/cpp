@@ -2,8 +2,7 @@
 #include <iostream>
 #include <math.h>
 using namespace std;
-bool is_prime(int n)
-{
+bool is_prime(int n) {
     bool kt = true;
     for (int i = 2; i <= sqrt(n); i++) {
         if (n % i == 0) {
@@ -13,8 +12,7 @@ bool is_prime(int n)
     }
     return kt;
 }
-int main()
-{
+int main() {
     int n,x = 0;
     cin >> n;
     n++;
