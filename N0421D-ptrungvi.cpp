@@ -4,8 +4,7 @@
 using namespace std;
 double a[1000001];
 long long n;
-int main()
-{
+int main() {
     cin >> n;
     for (int i = 1; i <= n; i++) cin >> a[i];
     sort(a + 1, a + n + 1);
