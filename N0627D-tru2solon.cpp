@@ -1,6 +1,6 @@
 #include<iostream>
 #include<string>
-#define RUN(i,a) for(int i = a.length()-1; i>=0;i--) 
+#define RUNFROM(i,a) for(int i = a.length()-1; i>=0;i--) 
 using namespace std;
 string Sub(string a, string b){ 
     string kq=" ";
@@ -12,7 +12,7 @@ string Sub(string a, string b){
         neg=true;
     }
     int borrow = 0;
-    RUN(i,a) {
+    RUNFROM(i,a) {
         int so = a[i]-b[i]-borrow;
         if(so < 0) {
             so+=10;
