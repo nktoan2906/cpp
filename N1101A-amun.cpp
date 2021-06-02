@@ -1,15 +1,16 @@
 #include <iostream>
+#define ll long long 
 using namespace std;
-const int N = 1e9 + 7;
-long long Mu(long long a, long long b) {
+const int mod = 1e9 + 7;
+ll Mu(ll a, ll b) {
     if (b == 0) return 1;
-    long long t = Mu(a, b / 2);
-    t = (t * t) % N;
-    if (b % 2 == 1) t = (t * a) % N;
-    return t;
+    ll kq = Mu(a, b / 2);
+    kq = (kq * kq) % mod;
+    if (b % 2 == 1) kq = (kq * a) % mod;
+    return kq;
 }
 int main() {
-    long long m = 2, n;
+    ll m = 2, n;
     cin >> n;
-    cout << (long long)Mu(m, n) % N;
+    cout << (ll)Mu(m, n) % mod;
 }
