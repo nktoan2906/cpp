@@ -1,15 +1,17 @@
-//http://laptrinhphothong.vn/Problem/Details/4576
 #include <iostream>
+#define FOR(i,n) for(int i = 1; i <= n; ++i)
+#define ll long long
 using namespace std;
+const int N = 1e9 + 7;
 int main() {
-    long long n,s;
+    ll n,kq;
     cin>>n;
-    long long t=1;
-    for (int i=1; i<=n; i++) {
-        t *= i%1000000007;
-        s = t%1000000007;
+    ll t=1;
+    FOR(i,n){
+        t *= i%N;
+        kq = t%N;
     }
-    cout<<s;
+    cout<<kq;
     return 0;
 }
     
