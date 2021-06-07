@@ -1,11 +1,13 @@
-//http://laptrinhphothong.vn/Problem/Details/5596
 #include <iostream>
+#define ll long long
+#define bkhac0 (b!=0) 
+#define amodb (a % b == 0)
 using namespace std;
-long long a,b;
+ll a,b;
 int main() {
     cin >> a >> b;
-    if(b!=0) {
-        if(a%b==0) cout<<"YES";
+    if(bkhac0){
+        if(amodb) cout<<"YES";
         else cout<<"NO";
     }
     else cout<<"-1";
