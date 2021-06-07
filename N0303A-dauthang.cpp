@@ -1,11 +1,13 @@
-//http://laptrinhphothong.vn/Problem/Details/4573
 #include <iostream>
+#define FOR13() for (int i=1; i<=3; i++)
+#define FOR(i,n) for (int j=1; j<=n; j++)
+#define ll long long 
 using namespace std;
-long long n;
+ll n;
 int main(){ 
     cin>>n;
-    for (int i=1; i<=3; i++) {
-        for (int j=1; j<=n; j++) {
+    FOR13() {
+        FOR(i,n) {
             cout<<"#";
         }
         n--;
