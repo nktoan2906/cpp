@@ -1,11 +1,11 @@
-//http://laptrinhphothong.vn/Problem/Details/5829
 #include <iostream>
 #include <math.h>
+#define FORTRUNCAN(i,n) for(int i=1;i<=trunc(sqrt(n));i++)
 using namespace std;
 int n,s=0;
 int main() {
     cin>>n;
-    for(int i=1;i<=trunc(sqrt(n));i++) {
+    FORTRUNCAN(i,n) {
        if(n%i==0) s=s+i+n/i;
     }
     if(s==2*n) cout<<"YES";
