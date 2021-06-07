@@ -1,11 +1,13 @@
-//http://laptrinhphothong.vn/Problem/Details/5802
 #include <iostream>
+#define FOR(i,n) for(int i=1;i<=n;++i)
+#define imod10 i % 10 == 0
+#define ll long long
 using namespace std;
-long long n;
+ll n;
 int main() {
     cin>>n;
-    for(int i=1;i<=n;i++){
-        if(i%10==0) cout<<i<<endl;
+    FOR(i,n){
+        if(imod10) cout<<i<<endl;
         else cout<<i<<" ";
     }
     return 0;
