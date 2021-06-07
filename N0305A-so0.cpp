@@ -1,11 +1,12 @@
-//http://laptrinhphothong.vn/Problem/Details/4575
 #include <iostream>
+#define FOR(i,n) for(int i = 1; i <= n; ++i)
+#define FOR(j,i) for(int j = 1; j <= i; ++j)
 using namespace std;
 long long n;
 int main() {
     cin >> n;
-    for(int i = 1; i <= n; i++) {
-        for(int j = 1; j <= i; j++) {
+    FOR(i,n) {
+        FOR(j,i){
             cout << "0";
         }
         cout << endl;
