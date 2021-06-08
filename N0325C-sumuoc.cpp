@@ -1,20 +1,15 @@
-//http://laptrinhphothong.vn/Problem/Details/5770
 #include <iostream>
-#include <cmath>
+#define ull unsigned long long
+#define nmodi n % i == 0 
 using namespace std;
-
-int main()
-{
-	unsigned long long n;
-	unsigned long long s = 0;
+int main() {
+	ull n,s = 0;
 	cin >> n;
-	for (unsigned long long i = 1; i <= sqrt(n); i++)
-	{
-		if (n % i == 0)
-		{
-			unsigned long long j = n / i;
-			if (i == j) s = s + i;
-			else s = s + i + j; 
+	for (ull i = 1; i*i <= n; i++) {
+		if (nmodi) {
+			ull j = n / i;
+			if (i == j) s += i;
+			else s += i + j; 
 		}
 	}
 	cout << (s);
