@@ -1,9 +1,11 @@
-//http://laptrinhphothong.vn/Problem/Details/5762
 #include <iostream>
+#define FOR2CAN(i,n) for (int i = 2; i * i <= n; ++i) 
+#define nmodi n % i == 0
+#define FOR(a,b) for(int i = a; i <= b; ++i)
 using namespace std;
-bool CheckSNT(long long n) {
-	for (int i = 2; i * i <= n; i++) {
-		if (n % i == 0) return false;
+bool CheckSNT(int n) {
+	FOR2CAN(i,n){
+		if (nmodi) return false;
 	}
 	return n > 1;
 }
@@ -11,7 +13,7 @@ int dem = 0;
 int main() {
 	int i, a, b;
 	cin >> a >> b;
-	for (i = a; i <= b; i++) {
+	FOR(a,b) {
 		if (CheckSNT(i)) {
 			cout << i;
 			dem++;
