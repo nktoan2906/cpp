@@ -1,13 +1,12 @@
 #include <iostream>
-#include <math.h>
-#include <algorithm>
+#define FOR(i,n) for (int i = 1; i <= n; ++i)
 #define ll long long
-#define ull unsigned long long
 using namespace std;
 ll max1 = 0, max2 = 0;
 int main() {
-    ll n; cin >> n;
-    for (int i = 1; i <= n; ++i) {
+    ll n; 
+    cin >> n;
+    FOR(i,n) {
         ll a;
         cin >> a; //  nhập mảng 
         a = abs(a); 
