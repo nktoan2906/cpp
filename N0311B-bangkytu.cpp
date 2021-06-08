@@ -1,12 +1,14 @@
-//http://laptrinhphothong.vn/Problem/Details/4581
 #include <iostream>
+#define ll long long
+#define FOR(i,n) for(int i=1;i<=n;i++)
+#define FOR(j,m) for(int j=1;j<=m;j++)
 using namespace std;
-long long n,m;
+ll n,m;
 char ch;
 int main() {
     cin>>n>>m>>ch;
-    for(int i=1;i<=n;i++){
-        for(int j=1;j<=m;j++){
+    FOR(i,n){
+        FOR(j,m){
             cout<<ch;
         }
         cout<<endl;
