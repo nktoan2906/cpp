@@ -1,4 +1,3 @@
-//http://laptrinhphothong.vn/Problem/Details/5801
 #include <iostream>
 using namespace std;
 int main() {
