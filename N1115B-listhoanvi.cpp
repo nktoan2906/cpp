@@ -2,7 +2,7 @@
 #define FOR(i,n) for (int i = 1; i <= n; i++)
 #define max 20
 using namespace std;
-int n,kt[max] = { 0 };//Đánh dấu chưa có phần tử nào sử dụng hết
+int n,check[max] = { 0 };//Đánh dấu chưa có phần tử nào sử dụng hết
 int a[max];//Lưu hoán vị vào mảng a
 void COUT() {
     FOR(i,n) {
@@ -12,14 +12,14 @@ void COUT() {
 }
 void ListHoanVi(int k) {
     FOR(i,n) {
-        if (!kt[i]) { //Kiểm tra nếu phần tử chưa được chọn thì sẽ đánh dấu
+        if (!check[i]) { //Kiểm tra nếu phần tử chưa được chọn thì sẽ đánh dấu
             a[k] = i; // Lưu một phần tử vào hoán vị
-            kt[i] = 1;//Đánh dấu đã dùng
+            check[i] = 1;//Đánh dấu đã dùng
             if (k == n) COUT(); //Kiểm tra nếu đã chứa một hoán vị thì xuất
             else {
                 ListHoanVi(k + 1);
             }
-            kt[i] = 0;
+            check[i] = 0;
         }
     }
 }
