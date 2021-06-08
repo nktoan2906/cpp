@@ -1,9 +1,10 @@
 #include <iostream>
+#define FOR(i,n) for (int i = 1; i <= n; ++i)
 using namespace std;
 char s[22];
 int n, dem, L, R;
 void Cout() {
-	for (int i = 1; i <= n; ++i){
+	FOR(i,n){
 		cout << s[i];
 	}
 	cout << '\n';
