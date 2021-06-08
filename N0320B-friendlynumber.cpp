@@ -1,14 +1,18 @@
-//http://laptrinhphothong.vn/Problem/Details/5763
 #include <iostream>
+#define ll long long 
+#define FOR(i,a) for(int i=1; i<a; i++)
+#define FOR(i,b) for(int i=1; i<b; i++)
+#define amodi a % i == 0
+#define bmodi b % i == 0
 using namespace std;
-long long a,b,s,s1;
+ll a,b,s,s1;
 int main() {
     cin>>a>>b;
-    for(int i=1; i<a; i++) {
-        if(a%i==0) s=s+i;
+    FOR(i,a){
+        if(amodi) s+=i;
     }
-    for(int i=1; i<b; i++) {
-        if(b%i==0) s1=s1+i;
+    FOR(i,b) {
+        if(bmodi) s1+=i;
     }
     if((s==b)&&(s1==a)) cout<<"YES";
     else cout<<"NO";
