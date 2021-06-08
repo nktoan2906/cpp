@@ -1,14 +1,14 @@
-//http://laptrinhphothong.vn/Problem/Details/4594
 #include <iostream>
+#define FOR(i,n) for (int i = 1; i <= n; i++)
+#define ale a % 2 != 0
 using namespace std;
 int main() {
-	long long n, a, min, max;
+	int n, a, min = -1, max;
 	cin >> n;
-	min = -1;
 	bool minInit = false;
-	for (int i = 0; i < n; i++) {
+	FOR(i,n) {
 		cin >> a;
-		if (a % 2 != 0) {
+		if (ale) {
 			if (!minInit || a < min) {
 				minInit = true;
 				min = a;
