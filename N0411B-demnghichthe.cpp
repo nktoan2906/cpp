@@ -1,13 +1,15 @@
 #include <iostream>
+#define FOR(i,n) for (int i = 1; i <= n; i++)
+#define FOR(j,n) for (int j = 1; j <= n; j++)
 using namespace std;
 int main() {
     int n;
     cin >> n;
     int a[n];
-    for (int i = 0; i < n; i++) cin >> a[i];
+    FOR(i,n) cin >> a[i];
     int dem = 0;
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
+    FOR(i,n) {
+        FOR(j,n) {
             if (i < j && a[i] > a[j]) dem++;
         }
     }
