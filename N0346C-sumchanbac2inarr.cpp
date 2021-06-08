@@ -1,9 +1,9 @@
 #include <iostream>
 #define FOR(i,n) for(int i=1;i<=n;i++)
 using namespace std;
+const int N = 1e6 + 1;
 int main () {
-    int n;
-    int a[10000+1];
+    int n,a[N];
     cin>>n;
     FOR(i,n) cin>>a[i];
     FOR(i,n)  {
