@@ -6,17 +6,17 @@ using namespace std;
 int main() {
     int n;
     while(cin >> n) {
-        int S = 0,SoChuSo = 0,p = n,q = n;
+        int S = 0,SoChuSo = 0,chuso1 = n,kq = n;
         while(n>0) {
             n /= 10;
             SoChuSo += 1;
         }
         FOR(i,SoChuSo) {
-            int m = p % 10;
-            p /= 10;
-            S += pow(m, SoChuSo);
+            int chuso = chuso1 % 10;
+            chuso1 /= 10;
+            S += pow(chuso, SoChuSo);
         }
-        if (S == q) cout << "YES" ;
+        if (S == kq) cout << "YES" ;
         else cout << "NO" ;
     }
     return 0;
