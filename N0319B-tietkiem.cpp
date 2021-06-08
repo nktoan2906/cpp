@@ -1,13 +1,11 @@
-//http://laptrinhphothong.vn/Problem/Details/5761
 #include <iostream>
-#include <math.h>
+#define FOR(i,n) for(int i=1;i<=n;i++)
 using namespace std;
 int main() {
-    long long n;
+    int n;
     cin>>n;
-    long long n0 = 2000;
-    long long kq = 0;
-    for(int i=1;i<=n;i++){
+    int n0 = 2000,kq = 0;
+    FOR(i,n){
         kq += n0;
         n0 += 1000; 
     }
