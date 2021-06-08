@@ -1,10 +1,10 @@
-//http://laptrinhphothong.vn/Problem/Details/5616
 #include <iostream>
+#define ll long long
 using namespace std;
-long long n,k;
+ll n,k;
 int main() {
     cin>>n;
-    long long i=1;
+    ll i=1;
     while( k < n) {
         k+=i;
         i++;
