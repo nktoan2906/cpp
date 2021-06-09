@@ -4,9 +4,9 @@
 #define ll long long
 using namespace std;
 ll s1,s2;
-inline ll Sum(ll n){
-    if(n < 10) return n;
-    return n%10 + Sum(n/10); 
+inline ll Sum(ll s){
+    if(s < 10) return s;
+    return s%10 + Sum(s/10); 
 }
 int main() {
     cin>>s1>>s2;
