@@ -1,10 +1,10 @@
-//http://laptrinhphothong.vn/Problem/Details/5833
 #include <iostream>
 #define ll  long long
+#define FOR(i,n) for (ll i = 0; i < n; ++i)
 using namespace std;
-ll luythua(ll a, ll n) {
+ll POW(ll a, ll n) {
     float s = 1;
-    for (ll i = 0; i < n; i++) {
+    FOR(i,n) {
         s *= a;
     }
     return s;
@@ -12,5 +12,5 @@ ll luythua(ll a, ll n) {
 int main() {
     ll a, n;
     cin >> a >> n;
-    cout << luythua(a, n);
+    cout << POW(a, n);
 }
