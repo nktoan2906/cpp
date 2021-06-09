@@ -1,11 +1,12 @@
-//http://laptrinhphothong.vn/Problem/Details/5883
 #include <iostream>
+#define amodx a % x == 0
+#define ll long long
 using namespace std;
-long long a, b, x;
+ll a, b, x;
 int main() {
     cin >> a >> b >> x;
-    long long dem = (b / x) - (a / x);
-    if (a % x == 0) {
+    ll dem = (b / x) - (a / x);
+    if (amodx) {
         dem++;
     }
     cout << dem;
