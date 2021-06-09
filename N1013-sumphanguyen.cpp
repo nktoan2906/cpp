@@ -9,7 +9,7 @@ lli sum(lli n) {
     FORCAN(i,n) {
         s += n / i;
     }
-    s = 2 * s - (can*can);
+    s = 2 * s - (can * can);
     return s;
 }
 int main() {
