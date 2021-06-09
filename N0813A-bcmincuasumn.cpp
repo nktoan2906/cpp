@@ -3,14 +3,14 @@
 #include <algorithm>
 #define ll long long
 using namespace std;
-long long s1,s2;
-ll sumchuso(ll n){
+ll s1,s2;
+inline ll Sum(ll n){
     if(n < 10) return n;
-    return n%10 + sumchuso(n/10);
+    return n%10 + Sum(n/10); 
 }
 int main() {
     cin>>s1>>s2;
-    cout << sumchuso(s1) / __gcd(sumchuso(s1), sumchuso(s2)) * sumchuso(s2)  ;
+    cout << (Sum(s1) * Sum(2))/( __gcd(Sum(s1), Sum(s2)));
     return 0;
 }
     
