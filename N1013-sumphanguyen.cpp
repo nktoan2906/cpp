@@ -1,19 +1,19 @@
 #include <iostream>
 #include <math.h>
 #include <algorithm>
-#define ll long long
+#define lli long long int 
+#define FORCAN(i,n) for (int i = 1; i * i <= n; i++) 
 using namespace std;
-ll int sum(ll int n) {
-    ll int root = sqrt(n);
-    ll int s = 0; 
-    for (int i = 1; i <= root; i++) {
+lli sum(lli n) {
+    lli can = sqrt(n),s = 0; 
+    FORCAN(i,n) {
         s += n / i;
     }
-    s = 2 * s - (root * root);
+    s = 2 * s - (can*can);
     return s;
 }
 int main() {
-    ll int n ;
+    lli n ;
     cin>>n;
     cout << sum(n);
     return 0;
