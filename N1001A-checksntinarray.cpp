@@ -1,27 +1,26 @@
 #include <iostream>
-#include <math.h>
+#define FORCAN2(i,a) for (int i = 2; i * i<= a; ++i) 
+#define FOR(i,n) for (int i = 1; i <= n; i++) 
+#define amodi a % i == 0
 using namespace std;
-bool checkprimes(int a) {
+const int N = 1e3 + 1;
+bool CheckSNT(int a) {
     if (a < 2) return false;
-    for (int i = 2; i <= sqrt(a); ++i) {
-        if (a % i == 0) return false;
+    FORCAN2(i,a)  {
+        if (amodi) return false;
     }
     return true;
 }
-void givenanARRAY(int a[], int n) {
-    for (int i = 0; i < n; i++) cin >> a[i];
-}
-int checkprimesinARRAY(int a[], int n) {
-    int cnt = 0;
-    for (int i = 0; i < n; i++) {
-        if (checkprimes(a[i])) cnt++;
+int checkSNTARRAY(int a[], int n) {
+    int dem = 0;
+    FOR(i,n){
+        if (CheckSNT(a[i])) dem++;
     }
-    return cnt;
+    return dem;
 }
 int main() {
-    int a[1000001];
-    long long n;
+    int a[N],n;
     cin >> n;
-    givenanARRAY(a, n);
-    cout << checkprimesinARRAY(a, n);
+    FOR(i,n) cin >> a[i];
+    cout << checkSNTARRAY(a, n);
 }
