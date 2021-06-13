@@ -1,39 +1,24 @@
 #include <iostream>
+#include <math.h>
+#include <algorithm>
+//http://laptrinhphothong.vn/Problem/Details/4608
+#define FOR(i,n) for (int i = 0; i < n; ++i)
 using namespace std;
-const int N = 1e5 + 1;
-int main()
-{
-   int even[N], odd[N];
+int main() {
+   int n;
+   cin >> n;
+   int a[n], b[n], c[2 * n];
    int index = 0;
-   int e, o, arr[e + o];
-   e = o;
-   cin >> e;
-   for (int i = 1; i <= e; ++i) cin >> even[i];
-   for (int i = 1; i <= o; ++i) cin >> odd[i] ;
-   // them mang even vao mang arr
-   for (int i = 0; i < e; i++) {
-      arr[index] = even[i];
+   FOR(i,n) cin >> a[i];
+   FOR(i,n) cin >> b[i];
+   FOR(i,n) {     //them mang a vao mang c
+      c[index] = a[i];
       index++;
    }
-   // them mang odd vao mang arr
-   for (int i = 0; i < o; i++) {
-      arr[index] = odd[i];
+   FOR(i,n) { // them mang b vao mang c
+      c[index] = b[i];
       index++;
    }
-
-   cout << "Tron hai mang thanh mot mang:\n";
-   cout << "\nMang chan: ";
-   for (int i = 0; i < e; i++)
-      cout << even[i] << " ";
-
-   cout << "\nMang le: ";
-   for (int i = 0; i < o; i++)
-      cout << odd[i] << " ";
-
-   cout << "\nMang sau khi tron: ";
-   for (int i = 0; i < N; i++)
-      cout << arr[i] << " ";
-   cout << endl;
-
+   for (int i = 0; i < 2 * n; ++i) cout << c[i] << " ";
    return 0;
 }
