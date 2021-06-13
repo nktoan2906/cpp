@@ -11,8 +11,6 @@ int main() {
    int index = 0;
    FOR(i,n) cin >> a[i];
    FOR(i,n) cin >> b[i];
-   sort(a,a+n);
-   sort(b,b+n);
    FOR(i,n) {     //them mang a vao mang c
       c[index] = a[i];
       index++;
@@ -21,6 +19,7 @@ int main() {
       c[index] = b[i];
       index++;
    }
+   sort(c,c+ 2 * n);
    for (int i = 0; i < 2 * n; ++i) cout << c[i] << " ";
    return 0;
 }
