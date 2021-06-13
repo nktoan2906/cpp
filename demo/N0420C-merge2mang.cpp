@@ -11,6 +11,8 @@ int main() {
    int index = 0;
    FOR(i,n) cin >> a[i];
    FOR(i,n) cin >> b[i];
+   sort(a,a+n);
+   sort(b,b+n);
    FOR(i,n) {     //them mang a vao mang c
       c[index] = a[i];
       index++;
