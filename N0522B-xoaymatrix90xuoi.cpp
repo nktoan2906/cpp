@@ -5,20 +5,20 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-    int a[n][n], kq[n][n];
+    int a[n][n], b[n][n];
     FOR1(i,n) {
         FOR(j,n) cin >> a[i][j];
     }
     FOR1(i,n) {
         int k = n - 1;
         FOR(j,n)  {
-            kq[i][j] = a[k][i];
+            b[i][j] = a[k][i];
             k--;
         }
     }
     FOR1(i,n) {
         FOR(j,n)  {
-            cout << kq[i][j] << " ";
+            cout << b[i][j] << " ";
         }
         cout << "\n";
     }
