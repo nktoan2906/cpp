@@ -7,8 +7,7 @@ private:
 public:
     Student(string name, int age) {
         this->name = name;           // nếu tên của tham số đầu vào khớp với tên thuộc tính của lớp, 
-        this->age = age;            // bạn có thể truy cập thuộc tính của lớp = từ khóa this & toán tử -> 
-                                    
+        this->age = age;            // bạn có thể truy cập thuộc tính của lớp = từ khóa this & toán tử ->                          
     }
     void display() {
         cout << "Name: " << name << endl;
