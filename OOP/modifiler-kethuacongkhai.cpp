@@ -6,20 +6,20 @@ class Base {
     private: int riengtu = 1;
     protected: int dcbaove = 2;
     public: int congkhai = 3;
-    int getPVT() {
+    int GetPrivate() {
         return riengtu;
     }
 };
 class PublicDerived : public Base {
     public:
-    int getProt() {
+    int GetProtected() {
         return dcbaove;
     }
 };
 int main() {
     PublicDerived object1;
-    cout << "Private = " << object1.getPVT() << endl;
-    cout << "Protected = " << object1.getProt() << endl;
+    cout << "Private = " << object1.GetPrivate() << endl;
+    cout << "Protected = " << object1.GetProtected() << endl;
     cout << "Public = " << object1.congkhai << endl;
     return 0;
 }
