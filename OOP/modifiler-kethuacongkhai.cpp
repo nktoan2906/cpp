@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
-//kế thừa công khai làm cho public các members của lớp cơ sở public trong lớp dẫn 
-//xuất và các protected members của lớp cơ sở vẫn protected ở trong lớp dẫn xuất.
+// kế thừa công khai làm cho public các members của lớp cơ sở public trong lớp dẫn 
+// xuất và các protected members của lớp cơ sở vẫn protected ở trong lớp dẫn xuất.
 class Base {
     private: int pvt = 1;
     protected: int prot = 2;
