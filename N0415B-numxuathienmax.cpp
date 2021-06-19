@@ -1,14 +1,16 @@
 #include <iostream>
+#define FOR(i,n) for (int i = 0; i < n; ++i)
+#define FOR1(j,n) for (int j = 0; j < n; j++)
 using namespace std;
-int a[101];
 int main() {
     int n;
     cin>>n;
-    for (int i = 0; i < n; i++) cin>>a[i];
+    int a[n];
+    FOR(i,n) cin>>a[i];
     int max = 1;
-    for (int i = 0; i < n; i++) {
+    FOR(i,n) {
         int dem = 0;
-        for (int j = 0; j < n; j++) {
+        FOR1(j,n) {
             if (a[i] == a[j]) dem++;
         }
         if (max < dem) max = dem; 
