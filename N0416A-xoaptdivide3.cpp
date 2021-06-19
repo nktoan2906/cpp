@@ -1,21 +1,23 @@
 #include <iostream>
 #define ll long long
+#define FOR(i,n) for (int i = 0; i < n; ++i)
+#define FOR1(j,t,n) for (int j = t; j < n; ++j)
 using namespace std;
 int main(){
-    ll N = 1e6;
-    int n,a[N],dem;
+    int n;
     cin>>n;
-    for(int i=1 ; i<=n; i++) cin>>a[i];
+    int a[n];
+    FOR(i,n) cin>>a[i];
     int t = 0;
-    for (int i = 1; i <= n; ++i) {
+    FOR(i,n) {
         if (a[i] % 3 == 0) {
             t = i;
-            for (int j = t; j < n; j++) {
+            FOR1(j,t,n) {
                 a[j] = a[j + 1];
             }
-            i--;
-            n--;
+            --i;
+            --n;
         }
     }
-    for(int i=1;i<=n;i++) cout<<a[i]<<" ";
+    FOR(i,n) cout<<a[i]<<" ";
 }
