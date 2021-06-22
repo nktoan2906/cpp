@@ -11,7 +11,7 @@ signed main() {
 	ll dem = 0,valueganh = -1;
 	if(s.length() >= 3) {
 		FOR3LENGTH(i,s) {
-			dem++;
+			++dem;
 			if(s.substr(0 , dem) == s.substr(s.length() - dem , dem)) valueganh = max(valueganh , dem);
 		}
 	}
