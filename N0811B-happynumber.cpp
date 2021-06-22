@@ -1,9 +1,9 @@
 #include <iostream>
 #define ll long long
-#define ull unsigned long long
+#define ulli unsigned long long int
 #define happynumchan happynum % 2 == 0
-#define FOR(a,b) for (ll i = a; i <= b; ++i) 
-ull a, b, dem, happynum, chusocuan;
+#define FOR(a,b) for (ulli i = a; i <= b; ++i) 
+ulli a, b, dem, happynum, chusocuan;
 using namespace std;
 int main() {
     cin >> a >> b;
@@ -14,7 +14,7 @@ int main() {
             happynum += ((chusocuan % 10) * (chusocuan % 10));
             chusocuan /= 10;
         }
-        if (happynumchan) dem++;
+        if (happynumchan) ++dem;
     }
     cout<<dem;
 }
