@@ -12,7 +12,9 @@ int main() {
     FOR_1(i,r){
         FOR_2(j,i,r) a[j]+=i;
     }
-    for(long i=l; i<=r; ++i) dem+=a[i] > i;
+    for(long i=l; i<=r; ++i) {
+        dem+=a[i] > i;
+    }
     cout<<dem;
 }
     
