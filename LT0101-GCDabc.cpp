@@ -13,8 +13,7 @@ ulli GCD (ulli a,ulli b) {
 int main () {
     ulli a,b,c,tg;
     cin>>a>>b>>c;
-    tg = GCD (a,b);
-    cout<< GCD(tg,c);
+    cout<< GCD(GCD(a,b),c);
     return 0;
 }
     
