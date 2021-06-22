@@ -1,13 +1,12 @@
 #include <iostream>
 #define ulli unsigned long long int
+#define SWAP(a,b,temp) temp = a; a = b; b = temp;
 using namespace std;
 ulli GCD (ulli a,ulli b) {
     ulli temp;
     while (b > 0) {
         a %= b;
-        temp = a;
-        a = b;
-        b = temp;
+        SWAP(a,b,temp);
     }
     return a;
 }
