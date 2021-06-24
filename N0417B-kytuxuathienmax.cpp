@@ -1,21 +1,23 @@
-#include<bits/stdc++.h>
+#include<iostream>
+#include <queue>
+#define FOR(i,n) for(int i=1;i<=n;i++)
 using namespace std;
-char x[105];
-int  a[105];
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(0);
     int n;
     cin >> n;
-    for(int i=1;i<=n;i++)  {
+    int a[n];
+    char x[n];
+    FOR(i,n)  {
         cin >> x[i]; 
         a[x[i]]++;
     } 
     int max = 0;
-    for(int i=1;i<=n;i++) {
+    FOR(i,n) {
         if(max < a[x[i]]) max = a[x[i]];
     }
     priority_queue<char, vector<char>, greater<char>> priorityquere;
-    for(int i=1;i<=n;i++) {
+    FOR(i,n) {
         if(a[x[i]] == max) priorityquere.push(x[i]);
     }
     char u;
