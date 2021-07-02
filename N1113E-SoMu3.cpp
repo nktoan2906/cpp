@@ -6,7 +6,7 @@ const ll MOD = 1e9 + 7;
 ll a, n;
 ll POW(ll a, ll m) {
 	ll res = 1;
-	for (; m; m >>= 1, a = a * a % MOD){
+	FOR(m,a,MOD) {
 		if (m & 1) res = res * a % MOD;
 	}
 	return res;
