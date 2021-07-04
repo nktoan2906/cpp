@@ -7,16 +7,15 @@ int main()
 	ll n;
 	cin >> n;
 	ll a[n], b[n];
-	for (ll i = 0; i < n; ++i) {
+	for (ll i = 1; i <= n; ++i) {
 		cin >> a[i];
 		b[i] = a[i];
 	}
-	sort(b, b + n);
-	for (int i = 0; i < n; ++i)
-	{
-		if (a[i] == b[0]) cout<<i<<" ";
+	sort(b + 1, b + n + 1);
+	for (int i = 1; i <= n; ++i) {
 		if (a[i] == b[1]) cout<<i<<" ";
 		if (a[i] == b[2]) cout<<i<<" ";
 		if (a[i] == b[3]) cout<<i<<" ";
+		if (a[i] == b[4]) cout<<i<<" ";
 	}
 }
