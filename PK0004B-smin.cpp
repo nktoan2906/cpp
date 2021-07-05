@@ -1,20 +1,17 @@
 #include <iostream>
-#include <vector>
 #include <algorithm>
-#define FOR(i,n) for(long i=0;i<n;++i)
 using namespace std;
-int main(){
-    long n,Min = 1e7,temp;
-    cin>>n;
-    vector<long> a;
-    FOR(i,n) {
-        cin>>temp;
-        a.push_back(temp);
+int result = 1000000005;
+int main()
+{
+    int n;
+    cin >> n;
+    int a[n];
+    for (int i = 1; i <= n; cin >> a[i++]);
+    sort(a + 1, a + n + 1);
+    for (int i = 2; i <= n; i++){
+        result = min(result, a[i] - a[i - 1]);
     }
-    sort(a.begin(),a.end());
-    n--;
-    FOR(i,n) {
-        Min = min(Min,a[i+1] - a[i]);
-    }
-    cout<<Min; 
+    cout << result;
+    return 0;
 }
