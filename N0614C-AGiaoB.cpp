@@ -1,32 +1,18 @@
-#include<iostream>
-#include <map> 
-#define FOR(i,s) for(int i = 0 ; i < s.length() ; ++i)
-#define FOR1(i,s,s1) for(int i = 0 ; i < (AGiaoB(s) + AGiaoB(s1)).length() ; ++i)
-#define FOR09(i) for(char i = '0' ; i <= '9' ; ++i) 
-#define ll long long
-#define FASTER ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#include <iostream>
+#include <map>
 using namespace std;
-string AGiaoB(string s) {
-	map<char , ll> count;
-	FOR(i,s) ++count[s[i]];
-	string kq = "";
-	FOR(i,s) {
-		if(count[s[i]] > 0) {
-			kq += s[i];
-			count[s[i]] = 0 ;
-		}
-	}
-	return kq;
-}
-signed main(){
+#define FASTER ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+#define FOR(i, l, r) for (int i = (l); i <= (r); ++i)
+string s, s1;
+int main() {
 	FASTER;
-	string s , s1;
 	cin >> s >> s1;
-	ll kq = 0 ;
-	map<char , ll> dem;
-	FOR1(i,s,s1) ++dem[(AGiaoB(s) + AGiaoB(s1))[i]];
-	FOR09(i) {
-		if(dem[i] > 1) ++kq;
+	map<char, int> dem, dem1;
+	int count = 0;
+	for (int i = 0; i < s.size(); ++i) ++dem[s[i]];
+	for (int i = 0; i < s1.size(); ++i) ++dem1[s1[i]];
+	for (int i = 1; i <= 255; ++i) {
+		if (dem[i] > 0 && dem1[i] > 0) ++count;
 	}
-	cout << kq;
+	cout<<count;
 }
