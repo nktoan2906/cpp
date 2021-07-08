@@ -12,7 +12,7 @@ int main() {
 	for (int i = 0; i < s.size(); ++i) ++dem[s[i]];
 	for (int i = 0; i < s1.size(); ++i) ++dem1[s1[i]];
 	for (int i = 1; i <= 255; ++i) {
-		if (dem[i] > 0 && dem1[i] > 0) ++count;
+		if (dem[i] > 0 && dem1[i] > 0) ++count; // count = 1; // cout << char(i);
 	}
-	cout<<count;
+	cout<<count; // if (t = 0) cout << 0;
 }
