@@ -1,30 +1,25 @@
 #include <iostream>
-#define FOR(i,n) for (i = 0; i < n; i++) 
-#define FORBACH(n,i) for (i = n - 1; i >= 0; i--)
-#define FORJ(j,i,n) for (int j = i + 1; j < n; j++)
-#define FOR(j,n) for (int j = 0; j < n; j++)
+#include <math.h>
 using namespace std;
-int main() {
-	int n;
-	cin >> n;
-	int a[n], i;
-	FOR(i,n) a[i] = 0;
-	FOR(i,n) {
-		cout << a[i];
-	}
-	cout << "\n";
-	//xu ly
-	FORBACH(n,i){
-		if (a[i] == 0) { // neu gap phan tu 0 dau tien 
-			a[i] = 1; // gan no lai thanh 1
-			FORJ(j,i,n)  a[j] = 0; // gan toan bo phan tu phia sau no thanh 0
-			FOR(j,n) { // in ra day so moi
-				cout<<a[j];
-			}
-			cout<<"\n";
-			i = n; // gan i = n de khi het vong lap i-- nen i se = n - 1, tu do chay lai tu vi tri cuoi.
-				   // gan i = n - 1 la sai vi khi het vong lap hien tai i-- se thanh n - 2.
+#define DANH ios_base::sync_with_stdio(false);cin.tie(0); cout.tie(0); 
+void gen(int a[], int n) {
+	++a[n - 1];
+	for (int i = n - 1; i > 0; --i) {
+		if (a[i] > 1) {
+			++a[i - 1];
+			a[i] -= 2;
 		}
 	}
-	return 0;
+}
+int main(){
+	DANH;
+	int n;
+	cin >> n;
+	int a[n];
+	for (int i = 0; i < n; ++i) a[i] = 0;
+	for (int i = 0; i < pow(2, n); ++i) {
+		for (int i = 0; i < n; ++i) cout << a[i];
+		gen(a, n);
+		cout<<'\n';
+	}
 }
