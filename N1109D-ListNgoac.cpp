@@ -1,32 +1,32 @@
 #include <iostream>
-#define FOR(i,n) for (int i = 1; i <= n; ++i)
+#define RUN for (int i = 1; i <= n; ++i)
 using namespace std;
 char s[22];
 int n, dem, L, R;
 void Cout() {
-	FOR(i,n){
+	RUN {
 		cout << s[i];
 	}
 	cout << '\n';
 }
 void ListNgoac(int i) {
 	if (i > n) {
-		dem++;
+		++dem;
 		Cout();
 		return;
 	}
 	else {
 		if (L < n / 2) {
 			s[i] = '(';
-			L++;
+			++L;
 			ListNgoac(i + 1);
-			L--;
+			--L;
 		}
 		if (L > R) {
 			s[i] = ')';
-			R++;
+			++R;
 			ListNgoac(i + 1);
-			R--;
+			--R;
 		}
 	}
 }
