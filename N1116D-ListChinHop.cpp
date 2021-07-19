@@ -1,19 +1,17 @@
 #include <iostream>
 using namespace std;
-#define MAX 100
-int n, k, a[MAX], x[MAX];
-void Init() {
-    cin >> k >> n;
-    for (int i = 1; i <= n; ++i) x[i] = 1;
-}
+#define RUN for (int i = 1; i <= n; ++i)
+#define RUNK for (int i = 1; i <= k; ++i) 
+#define JRUN for (int j = 1; j <= n; ++j)
+int n, k, a[101], x[101];
 void COUT() {
-    for (int i = 1; i <= k; ++i) {
+    RUNK {
         cout << a[i] << ' ';
     }
     cout << endl;
 }
 void ListChinHop(int i) {
-    for (int j = 1; j <= n; ++j) {
+    JRUN {
         if (x[j]) {
             a[i] = j;
             if (i == k) COUT();
@@ -26,6 +24,7 @@ void ListChinHop(int i) {
     }
 }
 int main() {
-    Init();
+    cin >> k >> n;
+    RUN x[i] = 1;
     ListChinHop(1);
 }
