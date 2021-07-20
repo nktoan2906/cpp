@@ -16,6 +16,6 @@ int main() {
     cin >> q;
     RUNQ {
         cin >> p;
-        cout << s[p] << '\n';
+        cout << s[p] << '\n'; // s(r) - s(l - 1); 
     }
 }
