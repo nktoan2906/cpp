@@ -1,18 +1,16 @@
 #include <iostream>
-#define FOR(i,n) for (int i=1; i<=3; i++)
-#define FOR1(j,n) for (int j=1; j<=n; j++)
-#define ll long long 
+#define RUN3 for (int i = 1; i <= 3; ++i)
+#define RUNJ for (int j = 1; j <= n; ++j)
 using namespace std;
-ll n;
-int main(){ 
-    cin>>n;
-    FOR(i,n) {
-        FOR(j,n) {
-            cout<<"#";
+long long  n;
+int main() {
+    cin >> n;
+    RUN3 {
+        RUNJ {
+            cout << "#";
         }
         --n;
-        cout<<endl;
+        cout << endl;
     }
     return 0;
 }
-    
