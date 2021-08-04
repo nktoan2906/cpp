@@ -2,14 +2,14 @@
 #include <math.h>
 using namespace std;
 int main() {
-	int n, t, q;
+	int n, t, x;
 	cin >> n >> t;
 	while (t--) {
-		cin >> q;
-		int tg = sqrt(q);
-		if (tg * tg + 1 < q){
-			tg++;
+		cin >> x;
+		int N = sqrt(x);
+		if (N * N + 1 < x){
+			N++;
 		}
-		cout << tg * tg + 1 << endl;
+		cout << N * N + 1 << endl;
 	}
 }
