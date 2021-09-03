@@ -1,20 +1,20 @@
 #include <iostream>
-#define f1(i, n) for(int i = 1; i <= n; ++i)
+#define RUNLR for(int i = left; i <= right; ++i)
+#define faster ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 using namespace std;
-long long int h1, m1, h2, m2, ans;
+long long int hour_1, minuet_1, hour_2, minuet_2, bell_ring;
 int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-    cin >> h1 >> m1 >> h2 >> m2;
-    long long int l = h1 * 60 + m1;
-    long long int r = h2 * 60 + m2;
-    for(int i = l; i <= r; ++i) {
-        int h = i / 60, m = i % 60;
-        if(m == 30) ++ans;
-        if(m == 0) {
-            h %= 12;
-            if(h == 0) h = 12;
-            ans += h; 
+    faster;
+    cin >> hour_1 >> minuet_1 >> hour_2 >> minuet_2;
+    long long int left = hour_1 * 60 + minuet_1, right = hour_2 * 60 + minuet_2;
+    RUNLR {
+        int hour = i / 60, minuet = i % 60;
+        if(minuet == 30) ++bell_ring;
+        if(minuet == 0) {
+            hour %= 12;
+            if(hour == 0) hour = 12;
+            bell_ring += hour; 
         }
     }
-    cout << ans;
+    cout << bell_ring;
 }
