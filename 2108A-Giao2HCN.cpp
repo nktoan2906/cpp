@@ -1,14 +1,12 @@
 #include <iostream>
-#include <algorithm>
-#include <math.h>
 #define faster ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define ll long long 
 using namespace std;
 ll x[5], y[5];
-int Giao(int l1, int r1, int l2, int r2) {
-    int L = max(l1, l2); 
-    int R = min(r1, r2);
-    return max(0, R - L);
+int Giao(int left_1, int right_1, int left_2, int right_2) {
+    int Left = max(left_1, left_2); 
+    int Right = min(right_1, right_2);
+    return max(0, Right - Left);
 }
 int main() {
     faster;
