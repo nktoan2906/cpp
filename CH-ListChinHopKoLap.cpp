@@ -1,26 +1,27 @@
 #include <iostream>
+#define RUN(i, a, b) for(int i = a; i <= b; ++i) 
 using namespace std;
 #define MAX 100
-int n, k, a[MAX], vecto[MAX];
+int n, k, a[MAX], v[MAX];
 void CIN() {
     cin >> n >> k;
-    for (int i = 1; i <= n; ++i) vecto[i] = 1;
+    RUN(i, 1, n) v[i] = 1;
 }
 void COUT() {
-    for (int i = 1; i <= k; ++i) {
+    RUN(i, 1, k) {
         cout << a[i] << ' ';
     }
     cout << endl;
 }
 void ListChinHopKoLap(int i) {
-    for (int j = 1; j <= n; ++j) {
-        if (vecto[j]) {
+    RUN(j, 1, n) {
+        if (v[j]) {
             a[i] = j;
             if (i == k) COUT();
             else {
-                vecto[j] = 0;
+                v[j] = 0;
                 ListChinHopKoLap(i + 1);
-                vecto[j] = 1;
+                v[j] = 1;
             }
         }
     }
