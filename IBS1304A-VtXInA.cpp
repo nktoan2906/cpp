@@ -1,19 +1,20 @@
 #include <iostream>
 #include <map>
+#define RUN(i, a, b) for(int i = a; i <= b; ++i) 
 using namespace std;
 int main() {
-    long long n, ntruyvan, truyvan; 
+    long long int n, ntruyvan, truyvan; 
     cin >> n;
     long long int a[n + 1];
-    map<long long, long long> vt;
-    for (int i = 1; i <= n; ++i) {
+    map<long long int, long long int> pos;
+    RUN(i, 1, n) {
         cin >> a[i];
-        vt[a[i]] = i;
+        pos[a[i]] = i;
     }
     cin >> ntruyvan;
-    for (int j = 1; j <= ntruyvan; ++j) {
+    RUN(j, 1, ntruyvan) {
         cin >> truyvan;
-        cout << vt[truyvan] << '\n';
+        cout << pos[truyvan] << '\n';
     }
 }
     
