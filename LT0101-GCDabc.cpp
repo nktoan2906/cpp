@@ -1,7 +1,7 @@
 #include <iostream>
 #include <math.h>
 #include <algorithm>
-#define ulli unsigned long long int
+#define ulli long long
 using namespace std; 
 int main() {
     ulli a, b, c ;
