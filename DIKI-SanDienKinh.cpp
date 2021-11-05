@@ -1,9 +1,10 @@
 #include <iostream>
+#define RUN(i, a, b) for(int i = a; i <= b; ++i) 
 using namespace std;
-long int n,m,a[100001];
+long int n, m, a[100001];
 void CIN() {
 	cin >> n >> m;
-	for (int i = 0; i < n; i++) cin >> a[i];
+	RUN(i, 1, n) cin >> a[i];
 }
 void CheckHaiVachSon() {
 	int i = 1,j = 0,res = 0;
