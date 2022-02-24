@@ -1,26 +1,30 @@
+//http://ntucoder.net/Problem/Details/135
 #include <iostream>
 #define RUN(i, a, b) for(int i = a; i <= b; ++i) 
 using namespace std;
-long int n, m, a[100001];
+long int paint_lines, runing_distance, paintline_distances[100001];
+
 void CIN() {
-	cin >> n >> m;
-	RUN(i, 1, n) cin >> a[i];
+	cin >> paint_lines >> runing_distance;
+	RUN(i, 1, paint_lines) cin >> paintline_distances[i];
 }
-void CheckHaiVachSon() {
-	int i = 1,j = 0,res = 0;
-	while (i < n) {
-		if (a[i] - a[j] < m) ++i;
-		if (a[i] - a[j] > m) ++j;
-		if (a[i] - a[j] == m) {
-			cout << a[j] << " " << a[i];
-			res = 1;
+
+void Check2PaintLines() {
+	int i = 1,j = 0,kq = 0;
+	while (i < paint_lines) { 
+		if (paintline_distances[i] - paintline_distances[j] < runing_distance) ++i; // ai - aj < m thì phải tăng ai sao cho bằng
+		if (paintline_distances[i] - paintline_distances[j] > runing_distance) ++j; // ai - aj > m thì phải giảm aj sao cho bằng
+		if (paintline_distances[i] - paintline_distances[j] == runing_distance) { // yêu cầu bài toán 
+			cout << paintline_distances[j] << " " << paintline_distances[i];
+			kq = 1;
 			break;
 		}
 	}
-	if (res == 0) cout << -1;
+	if (kq == 0) cout << -1; // ko có kq thì in ra -1
 }
+
 int main() {
 	CIN();
-	CheckHaiVachSon();
+	Check2PaintLines();
 	return 0;
 }
