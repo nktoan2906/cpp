@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+//http://ntucoder.net/Problem/Details/3333
+#include <iostream>
+#include <algorithm>
 #define ll long long 
 #define RUN(i, a, b) for (int i = a; i <= b; ++i)
 using namespace std;
@@ -6,6 +8,7 @@ const int N = 1e6 + 17;
 typedef pair<ll, ll> pll;
 pair <ll, ll> a[N];
 ll n, k, res;
+
 bool Compare(pll x, pll y) {
     return x.first < y.first; 
 }
