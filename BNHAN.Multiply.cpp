@@ -5,7 +5,7 @@ long long dong, cot, integer, a[1000005], inhanj= 0;
 int main() {
     cin >> dong >> cot >> integer;
     RUN(i, 1, dong) {
-        RUN(i, 1, cot) {
+        RUN(j, 1, cot) {
             ++inhanj; 
             a[inhanj] = i * j;
         }
