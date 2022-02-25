@@ -1,24 +1,19 @@
+//http://laptrinhphothong.vn/Problem/Details/5657
 #include <iostream>
-#define RUNK for (int K = 0; K <= k; ++K)
-#define RUNN for (int N = K; N <= n; ++N)
-using namespace std;
+#define RUN(i, a, b) for (ll i = a; i <= b; ++i )
 #define ll long long
-#define FASTER ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-ll n, k, m, a[5005][5005];
-ll C(ll k, ll n, ll m) {
-    if (k == 0 || k == n) return 1;
-    else {
-        RUNK {
-            RUNN {
-                if (K == 0 || K == N) a[K][N] = 1;
-                else a[K][N] = a[K][N - 1] % m + a[K - 1][N - 1] % m;
-            }
+using namespace std;
+
+int main() {
+    ll a, b, mod;
+    cin >> a >> b >> mod;
+    ll d[a + 1][b + 1];
+    RUN(j, 1, b) {
+        RUN(i, 1, a) {
+            if (i == 1) d[i][j] = j % mod;
+            else if (j == 1) d[i][j] = 0;
+            else d[i][j] = (d[i - 1][j - 1] + d[i][j - 1]) % mod;
         }
     }
-    return a[k][n];
-}
-signed main() {
-    FASTER;
-    cin >> k >> n >> m;
-    cout << C(k, n, m) % m;
+    cout << d[a][b];
 }
