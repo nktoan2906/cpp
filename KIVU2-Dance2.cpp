@@ -6,7 +6,7 @@
 using namespace std;
 typedef vector<ll> vi;
 const ll N = 1e6 + 17;
-ll n, cnt;
+ll n, pairnum;
 vi boy, boy1, girl, girl1;
 
 int main() {
@@ -31,7 +31,7 @@ int main() {
 	ll i = 0, j = 0;
 	while (i < boy.size() && j < girl1.size()) {
 		if (boy[i] < girl1[j]) {
-		    ++cnt;
+		    ++pairnum;
 			++i;
 			++j;
 		}
@@ -40,11 +40,11 @@ int main() {
 	i = 0, j = 0;
 	while (i < boy1.size() && j < girl.size()) {
 		if (boy1[i] > girl[j]) {
-		    ++cnt;
+		    ++pairnum;
 			++i;
 			++j;
 		}
 		else ++i;
 	}
-	cout << cnt;
+	cout << pairnum;
 }
