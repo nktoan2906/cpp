@@ -1,14 +1,17 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <algorithm>
+#define RUN(i, begin, end) for (int i = begin; i < end; ++i)
 using namespace std;
-long long n, res = 0, a[101];
+long long n, kq = 0, a[101];
+
 int main() {
     cin >> n;
-    for(int i = 0; i < n; cin >> a[i++]);
+    RUN(i, 0, n) cin >> a[i];
     sort(a, a + n, greater<int>());
-    for(int i = 0; i < n; ++i) {
-        if(a[i] >= i) res += a[i] - i;
+    RUN(i, 0, n) {
+        if(a[i] >= i) kq += a[i] - i;
 	}
-    cout << res;
+    cout << kq;
     return 0;
 }
     
