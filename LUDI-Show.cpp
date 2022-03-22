@@ -21,9 +21,8 @@ int main() {
 	k = a[1].second;
 	kq = 1;
 	RUN(i, 2, n) {
-		if (a[i].first > k)
-		{
-			kq++;
+		if (a[i].first > k) {
+			++kq;
 			k = a[i].second;
 		}
 	}
