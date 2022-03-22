@@ -1,14 +1,15 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#define RUN(i, begin, end) for (int i = begin; i < end; ++i)
 using namespace std;
-long long int n, x, a[100009],s;
+long long int n, x, dem[100009], pairs;
+
 int main(){
 	cin >> n;
-	for (int i = 0; i < n; i++){
+	RUN(i, 0, n){
         cin >> x;
-        s += a[x];
-        ++a[x]; 
+        pairs += dem[x];
+        ++dem[x]; 
 	}
-	cout << s; 
-	
- }
+	cout << pairs; 
+}
     
