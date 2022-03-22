@@ -1,14 +1,16 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <algorithm>
+#define RUN(i, begin, end) for (int i = begin; i < end; ++i)
 using namespace std;
-int n, a[121], s;
+int n, a[121], hmax;
 int main() {
     cin >> n;
-    for(int i = 0; i < n; i++) cin >> a[i];
+    RUN(i, 0, n) cin >> a[i];
     sort(a, a + n);
-    for(int i = 0; i < n; i++) {
-        if(s <= a[i]) ++s;
+    RUN(i, 0, n) {
+        if(hmax <= a[i]) ++hmax;
     }
-    cout << s;
+    cout << hmax;
     return 0;
 }
     
