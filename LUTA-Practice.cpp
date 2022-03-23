@@ -5,23 +5,25 @@
 using namespace std;
 typedef pair<ll,ll> ii;
 const ll N = 1e5 + 1;
-ll n, c, cnt;
+ll exercises, level_before, dem;
 ii a[100001];
+
 bool cmp (ii x, ii y) {
     return x.first < y.first;
 }
+
 int main() {
     faster; cin.tie(0); cout.tie(0);
-    cin >> n >> c;
-    RUN(i, 1, n) cin >> a[i].first >> a[i].second;
-    sort (a + 1, a + n + 1, cmp);
-    RUN(i, 1, n) {
-        if (c >= a[i].first) {
-            ++cnt;
-            c += a[i].second;
+    cin >> exercises >> level_before;
+    RUN(i, 1, exercises) cin >> a[i].first >> a[i].second;
+    sort (a + 1, a + exercises + 1, cmp);
+    RUN(i, 1, exercises) {
+        if (level_before >= a[i].first) {
+            ++dem;
+            level_before += a[i].second;
         }
     }
-    cout << cnt;
+    cout << dem;
     return 0;
 }
     
