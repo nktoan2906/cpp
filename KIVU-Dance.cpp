@@ -1,7 +1,9 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <algorithm>
 #define RUN(i, a, b) for (int i = a; i <= b; ++i)
 using namespace std;
 long long boys, girls, boy_h[100005], girl_h[100005];
+
 int main() {
     cin >> boys >> girls;
     RUN(i, 1, boys) cin >> boy_h[i];
