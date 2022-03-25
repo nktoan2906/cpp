@@ -6,7 +6,7 @@
 using namespace std;
 const int N = 1e6 + 17;
 typedef pair<ll, ll> pll;
-pair <ll, ll> a[N];
+pll a[N];
 ll n, k, res;
 
 bool Compare(pll x, pll y) {
