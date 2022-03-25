@@ -1,16 +1,15 @@
 #include <iostream>
-#define RUN3 for (int i = 1; i <= 3; ++i)
-#define RUNJ for (int j = 1; j <= n; ++j)
+#define RUN(i, begin, end) for (int i = begin; i <= end; ++i)
 using namespace std;
-long long  n;
+long long n;
+
 int main() {
     cin >> n;
-    RUN3 {
-        RUNJ {
+    RUN(i, 3, n) { 
+        RUN(j, 1, n) {
             cout << "#";
         }
         --n;
         cout << endl;
     }
-    return 0;
 }
