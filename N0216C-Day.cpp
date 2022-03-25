@@ -1,37 +1,39 @@
 #include <iostream>
+#define RUN(i, begin, end) for (int i = begin; i <= end; ++i)
 using namespace std;
 #define ll long long
+
 int main() {
-	ll ngay, thang, nam;
-	cin >> ngay >> thang >> nam;
-	ll D = nam - 1,K = 365 * D;
-	D = nam % 4;
-	ll songay,kq = 0;
-	for (int a = 1; a <= nam - 1; ++a) {
+	ll day, month, year;
+	cin >> day >> month >> year;
+	ll D = year - 1, K = 365 * D;
+	D = year % 4;
+	ll days, kq = 0;
+	RUN(a, 1, year - 1) {
 		if (a % 100 == 0) {
 			if (a % 400 == 0) ++K;
 		}
 		else if (a % 4 == 0) ++K;
 	}
-	if (nam % 100 == 0) {
-		if (nam % 400 == 0) kq = 1;
+	if (year % 100 == 0) {
+		if (year % 400 == 0) kq = 1;
 		else kq = 0;
 	}
 	else {
-		if (nam % 4 == 0) kq = 1;
+		if (year % 4 == 0) kq = 1;
 		else kq = 0;
 	}
 	ll ds = 0;
-	for (int a = 1; a <= thang; ++a) {
-		if (a == 1 || a == 3 || a == 5 || a == 7 || a == 8 || a == 10 || a == 12) songay = 31;
-		if (a == 4 || a == 6 || a == 9 || a == 11) songay = 30;
+	RUN(a, 1, month) {
+		if (a == 1 || a == 3 || a == 5 || a == 7 || a == 8 || a == 10 || a == 12) days = 31;
+		if (a == 4 || a == 6 || a == 9 || a == 11) days = 30;
 		if (a == 2) {
-			if (kq == 1) songay = 29;
-			else songay = 28;
+			if (kq == 1) days = 29;
+			else days = 28;
 		}
-		for (int b = 1; b <= songay; ++b) {
+		RUN(b, 1, days) {
 			K += 1;
-			if (b == ngay && a == thang) {
+			if (b == day && a == month) {
 				ds = 1;
 				break;
 			}
