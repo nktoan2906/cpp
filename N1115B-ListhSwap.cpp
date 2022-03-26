@@ -1,16 +1,17 @@
-#include<iostream>
-#define RUN for (int i = 0; i < n; ++i)
+#include <iostream>
+#define RUN(i, begin, end) for (int i = begin; i <= end; ++i)
 using namespace std;
-int n,check[20] = { 0 }; //Đánh dấu chưa có phần tử nào sử dụng hết
-int a[20]; //Lưu hoán vị vào mảng a
+int n, check[20] = { 0 }, a[20]; //Đánh dấu chưa có phần tử nào sử dụng hết
+
 void COUT() {
-    RUN {
+    RUN(i, 1, n) {
         cout << a[i] << " ";
     }
     cout << endl;
 }
+
 void ListHoanVi(int k) {
-    RUN {
+    RUN(i, 1, n) {
         if (!check[i]) {  //Kiểm tra nếu phần tử chưa được chọn thì sẽ đánh dấu
             a[k] = i;  // Lưu một phần tử vào hoán vị
             check[i] = 1; //Đánh dấu đã dùng
@@ -22,6 +23,7 @@ void ListHoanVi(int k) {
         }
     }
 }
+
 int main() {
     cin >> n;
     ListHoanVi(1);
