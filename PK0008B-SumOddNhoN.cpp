@@ -1,5 +1,5 @@
 #include <iostream>
-#define ulli unsigned long long int
+#define ulli long long int
 using namespace std;
 ulli n;
 
